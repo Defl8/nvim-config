@@ -72,8 +72,9 @@ use {
     run = function() vim.fn['mkdp#util#install']() end,
 }
 
-use 'karb94/neoscroll.nvim'
 
 use 'ggandor/leap.nvim'
+
+use 'nvim-treesitter/nvim-treesitter-context'
 end)
 

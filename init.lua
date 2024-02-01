@@ -5,8 +5,15 @@ require('lsp')
 require('mason').setup()
 require('barbar')
 require('maps')
-require('neoscroll').setup()
 require('leap').create_default_mappings()
+require('treesitter-context').setup{
+    enable = true
+}
+require('nvim-treesitter.configs').setup{
+    highlight = {
+        enable = true
+    }
+}
 require('telescope').setup{
   pickers = {
 

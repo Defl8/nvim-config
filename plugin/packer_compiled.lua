@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\wyatt\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
-  ["neoscroll.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\wyatt\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoscroll.nvim",
-    url = "https://github.com/karb94/neoscroll.nvim"
-  },
   nightfly = {
     loaded = true,
     path = "C:\\Users\\wyatt\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfly",
@@ -168,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\wyatt\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "C:\\Users\\wyatt\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
