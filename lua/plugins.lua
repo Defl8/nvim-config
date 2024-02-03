@@ -76,5 +76,10 @@ use {
 use 'ggandor/leap.nvim'
 
 use 'nvim-treesitter/nvim-treesitter-context'
+
+use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 end)
 

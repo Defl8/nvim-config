@@ -1,6 +1,7 @@
 require('options')
 require('plugins')
 require('colorscheme')
+require('lualine').setup()
 require('lsp')
 require('mason').setup()
 require('barbar')
