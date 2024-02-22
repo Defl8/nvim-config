@@ -10,3 +10,6 @@ map('n', '<c-q>', '<c-v>', {noremap = true, silent = true})
 -- Page up and down center cursor
 map('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
 map('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
+
+-- Oil maps
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
