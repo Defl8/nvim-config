@@ -1,7 +1,6 @@
 return {
   {
     "williamboman/mason.nvim",
-    cmd = "Mason", -- Load when :Mason is used
     config = function()
       require("mason").setup()
     end,
@@ -20,21 +19,19 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
+
+      lspconfig.html.setup{
         capabilities = capabilities
-      })
-      lspconfig.html.setup({
+      }
+      lspconfig.lua_ls.setup{
         capabilities = capabilities
-      })
-      lspconfig.lua_ls.setup({
+      }
+      lspconfig.pyright.setup{
         capabilities = capabilities
-      })
-      lspconfig.pyright.setup({
+      }
+      lspconfig.marksman.setup{
         capabilities = capabilities
-      })
-      lspconfig.marksman.setup({
-        capabilities = capabilities
-      })
+      }
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
