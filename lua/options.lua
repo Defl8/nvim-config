@@ -1,6 +1,7 @@
 -- Options
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.wrap = false
 
 -- Tab size
 vim.opt.tabstop = 4
