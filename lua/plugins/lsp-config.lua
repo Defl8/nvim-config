@@ -26,9 +26,6 @@ return {
       lspconfig.lua_ls.setup{
         capabilities = capabilities
       }
-      lspconfig.pyright.setup{
-        capabilities = capabilities
-      }
       lspconfig.marksman.setup{
         capabilities = capabilities
       }

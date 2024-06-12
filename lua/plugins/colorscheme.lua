@@ -1,14 +1,10 @@
 return {
     {
-        "navarasu/onedark.nvim",
-        name = "onedark",
+        "rose-pine/neovim",
+        name = "rose-pine",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme "onedark"
-            require('onedark').setup {
-                style = "deep",
-            }
-            require('onedark').load()
+            vim.cmd.colorscheme "rose-pine-moon"
         end
     }
 }
