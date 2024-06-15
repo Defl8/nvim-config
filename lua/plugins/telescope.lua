@@ -6,7 +6,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-        { "<leader>ff", "<CMD>Telescope find_files<CR>"},
+        { "<leader>ff", "<CMD>Telescope find_files hidden=true<CR>"},
         { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
     },
     tag = "0.1.5",
