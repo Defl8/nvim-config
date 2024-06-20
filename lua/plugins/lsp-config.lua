@@ -44,7 +44,7 @@ return {
       lspconfig.sqlls.setup{
         capabilities = capabilities
       }
-      lspconfig.pylsp.setup{
+      lspconfig.basedpyright.setup{
         capabilities = capabilities
       }
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
