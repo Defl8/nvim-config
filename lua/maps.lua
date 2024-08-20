@@ -1,5 +1,6 @@
 -- Shorten function name
 local map = vim.keymap.set
+local cmd = vim.cmd
 
 -- Set space as leader
 vim.g.mapleader = ' '
@@ -21,3 +22,12 @@ map("n", "<leader>Y", [["+Y]])
 
 -- Delete to system clipboard register
 map({"n", "v"}, "<leader>d", [["_d]])
+
+-- First char of line and visual block for code comments
+map("n", "<leader>q", "_<C-q>")
+
+
+-- Shoutout
+map("n", "<leader><leader>", function()
+    cmd("so")
+end)
