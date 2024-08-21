@@ -14,7 +14,7 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- Paste from system clipboard register
-map("x", "<leader>p", [["+p]])
+map("x", "<leader>p", [["_dP]])
 
 -- Yank to system clipboard register
 map({"n", "v"}, "<leader>y", [["+y]])
