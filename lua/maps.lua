@@ -14,7 +14,7 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- Paste from system clipboard register
-map("x", "<leader>p", [["_dP]])
+map("x", "<leader>p", [["+p]])
 
 -- Yank to system clipboard register
 map({"n", "v"}, "<leader>y", [["+y]])
@@ -24,8 +24,12 @@ map("n", "<leader>Y", [["+Y]])
 map({"n", "v"}, "<leader>d", [["_d]])
 
 -- First char of line and visual block for code comments
-map("n", "<leader>q", "_<C-q>")
+map("n", "<leader>c", "_<C-q>")
 
+-- Remove highlight
+map("n", "<leader>rh", function()
+    cmd("noh")
+end)
 
 -- Shoutout
 map("n", "<leader><leader>", function()
