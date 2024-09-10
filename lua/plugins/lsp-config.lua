@@ -41,9 +41,6 @@ return {
       lspconfig.basedpyright.setup{
         capabilities = capabilities
       }
-      lspconfig.bashls.setup{
-        capabilities = capabilities
-      }
       lspconfig.clangd.setup{
         capabilities = capabilities
       }
