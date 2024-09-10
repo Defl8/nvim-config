@@ -11,3 +11,6 @@ vim.opt.expandtab = true
 
 -- Smart indentation
 vim.opt.smartindent = true
+
+-- Colour Column
+vim.opt.colorcolumn = "80"
