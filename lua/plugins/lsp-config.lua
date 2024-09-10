@@ -32,13 +32,16 @@ return {
       lspconfig.cssls.setup{
         capabilities = capabilities
       }
-      lspconfig.tsserver.setup{
+      lspconfig.ts_ls.setup{
         capabilities = capabilities
       }
       lspconfig.sqlls.setup{
         capabilities = capabilities
       }
       lspconfig.basedpyright.setup{
+        capabilities = capabilities
+      }
+      lspconfig.bashls.setup{
         capabilities = capabilities
       }
       lspconfig.clangd.setup{
