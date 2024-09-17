@@ -14,13 +14,5 @@ return {
                 timeout_ms = 500
             }
         })
-        -- Keymap for formatting
-        vim.key.set({ "n", "v" }, "<leader>fb", function()
-            conform.format({
-                lsp_fallback = true,
-                async = false,
-                timeout_ms = 500
-            })
-        end)
     end
 }
