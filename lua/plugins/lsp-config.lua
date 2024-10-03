@@ -7,6 +7,11 @@ return {
     },
     {
         "williamboman/mason-lspconfig.nvim",
+        config = function()
+            require("mason-lspconfig").setup {
+                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "sqls", "ts_ls", "html", "cssls" }
+            }
+        end,
         event = "VeryLazy", -- Loads after critical plugins
         opts = {
             auto_install = true,
@@ -35,16 +40,13 @@ return {
             lspconfig.ts_ls.setup {
                 capabilities = capabilities
             }
-            lspconfig.sqlls.setup {
+            lspconfig.sqls.setup {
                 capabilities = capabilities
             }
             lspconfig.basedpyright.setup {
                 capabilities = capabilities
             }
             lspconfig.clangd.setup {
-                capabilities = capabilities
-            }
-            lspconfig.sqlls.setup {
                 capabilities = capabilities
             }
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
