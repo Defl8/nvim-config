@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup {
-                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "sqls", "ts_ls", "html", "cssls" }
+                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "sqls", "ts_ls", "html", "cssls", "powershell_es" }
             }
         end,
         event = "VeryLazy", -- Loads after critical plugins
@@ -47,6 +47,9 @@ return {
                 capabilities = capabilities
             }
             lspconfig.clangd.setup {
+                capabilities = capabilities
+            }
+            lspconfig.powershell_es.setup {
                 capabilities = capabilities
             }
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
