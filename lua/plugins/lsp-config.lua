@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup {
-                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "sqls", "ts_ls", "html", "cssls", "powershell_es", "svelte" }
+                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "ts_ls", "html", "cssls", "powershell_es", "svelte" }
             }
         end,
         event = "VeryLazy", -- Loads after critical plugins
@@ -38,9 +38,6 @@ return {
                 capabilities = capabilities
             }
             lspconfig.ts_ls.setup {
-                capabilities = capabilities
-            }
-            lspconfig.sqls.setup {
                 capabilities = capabilities
             }
             lspconfig.basedpyright.setup {
