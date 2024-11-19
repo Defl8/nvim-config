@@ -1,6 +1,7 @@
 -- Shorten function name
 local map = vim.keymap.set
 local cmd = vim.cmd
+local create_command = vim.api.nvim_create_user_command
 
 -- Set space as leader
 vim.g.mapleader = ' '
@@ -30,6 +31,9 @@ map("n", "<leader>c", "_<C-q>")
 map("n", "<leader>rh", function()
     cmd("noh")
 end)
+
+-- :W remap to :w
+create_command('W', 'w', {})
 
 -- Shoutout
 map("n", "<leader><leader>", function()
