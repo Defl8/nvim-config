@@ -6,7 +6,8 @@ return {
 
         conform.setup({
             formatters_by_ft = {
-                python = { "black" }
+                python = { "black" },
+                javascript = { "biome" }
             },
             format_on_save = {
                 lsp_fallback = true,
