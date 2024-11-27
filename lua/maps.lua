@@ -34,6 +34,10 @@ end)
 
 -- :W remap to :w
 create_command('W', 'w', {})
+-- :Wq remap to :wq
+create_command('Wq', 'wq', {})
+-- :Q remap to :q
+create_command('Q', 'q', {})
 
 -- Shoutout
 map("n", "<leader><leader>", function()
@@ -42,6 +46,5 @@ end)
 
 
 -- LSP MAPS
-
 -- Rename references
 map('n', '<leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>")
