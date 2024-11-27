@@ -22,7 +22,7 @@ map({ "n", "v" }, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
 
 -- Delete to system clipboard register
-map({ "n", "v" }, "<leader>d", [["_d]])
+map({ "n", "v" }, "<leader>d", "\"_d")
 
 -- First char of line and visual block for code comments
 map("n", "<leader>c", "_<C-q>")
@@ -39,3 +39,7 @@ create_command('W', 'w', {})
 map("n", "<leader><leader>", function()
     cmd("so")
 end)
+
+
+-- LSP MAPS
+map('n', '<leader>rn', 'grn')
