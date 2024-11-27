@@ -42,4 +42,6 @@ end)
 
 
 -- LSP MAPS
-map('n', '<leader>rn', 'grn')
+
+-- Rename references
+map('n', '<leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>")
