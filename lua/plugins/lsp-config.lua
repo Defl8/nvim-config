@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup {
-                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "ts_ls", "html", "cssls", "powershell_es", "svelte", "rust_analyzer" }
+                ensure_installed = { "basedpyright", "lua_ls", "marksman", "svelte", "rust_analyzer" }
             }
         end,
         event = "VeryLazy", -- Loads after critical plugins
