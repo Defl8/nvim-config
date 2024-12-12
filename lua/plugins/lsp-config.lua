@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup {
-                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "ts_ls", "html", "cssls", "powershell_es", "svelte" }
+                ensure_installed = { "basedpyright", "lua_ls", "clangd", "marksman", "ts_ls", "html", "cssls", "powershell_es", "svelte", "rust_analyzer" }
             }
         end,
         event = "VeryLazy", -- Loads after critical plugins
@@ -25,34 +25,16 @@ return {
 
             local lspconfig = require("lspconfig")
 
-            lspconfig.html.setup {
-                capabilities = capabilities
-            }
             lspconfig.lua_ls.setup {
                 capabilities = capabilities
             }
             lspconfig.marksman.setup {
                 capabilities = capabilities
             }
-            lspconfig.cssls.setup {
-                capabilities = capabilities
-            }
-            lspconfig.ts_ls.setup {
-                capabilities = capabilities
-            }
             lspconfig.basedpyright.setup {
                 capabilities = capabilities
             }
-            lspconfig.clangd.setup {
-                capabilities = capabilities
-            }
-            lspconfig.powershell_es.setup {
-                capabilities = capabilities
-            }
             lspconfig.svelte.setup {
-                capabilities = capabilities
-            }
-            lspconfig.biome.setup {
                 capabilities = capabilities
             }
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
