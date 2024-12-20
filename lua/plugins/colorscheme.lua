@@ -32,40 +32,9 @@ local function rose_pine(variant)
     return rose_pine_config
 end
 
-
-local function kanagawa(theme)
-    local kanagawa_config = {
-        "rebelot/kanagawa.nvim",
-        name = "kanagawa",
-        priority = 1000,
-        config = function()
-            require("kanagawa").setup({
-                theme = theme,
-                commentStyle = { italic = false },
-                keywordStyle = { italic = false },
-                background = { dark = theme }
-            })
-            vim.cmd.colorscheme "kanagawa"
-        end
-    }
-    return kanagawa_config
-end
-
-local lualine_config = {
-    "nvim-lualine/lualine.nvim",
-    config = function()
-        require("lualine").setup({
-            options = {
-                theme = vim.cmd("colorscheme"),
-            },
-        })
-    end,
-}
-
 -- CHANGE THIS ONLY
 return {
     --rose_pine("moon"),
     catppuccin("mocha"),
     --kanagawa("wave"),
-    lualine_config
 }
