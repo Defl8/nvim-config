@@ -48,3 +48,4 @@ end)
 -- LSP MAPS
 -- Rename references
 map('n', '<leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>")
+map('n', '<leader>er', "<cmd>lua vim.diagnostic.open_float()<CR>")
