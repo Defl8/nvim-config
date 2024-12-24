@@ -7,6 +7,7 @@ return {
         conform.setup({
             formatters_by_ft = {
                 python = { "black" },
+                lua = { "stylua" },
             },
             format_on_save = {
                 lsp_fallback = true,
