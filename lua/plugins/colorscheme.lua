@@ -1,4 +1,5 @@
 local function catppuccin(flavour)
+    -- flavour options: mocha, frappe
     local catppuccin_config = {
         "catppuccin/nvim",
         name = "catppuccin",
@@ -35,6 +36,6 @@ end
 -- CHANGE THIS ONLY
 return {
     --rose_pine("moon"),
-    catppuccin("mocha"),
+    catppuccin("frappe"),
     --kanagawa("wave"),
 }
