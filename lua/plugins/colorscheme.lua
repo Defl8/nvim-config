@@ -37,5 +37,4 @@ end
 return {
     --rose_pine("moon"),
     catppuccin("frappe"),
-    --kanagawa("wave"),
 }

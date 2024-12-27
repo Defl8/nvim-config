@@ -46,10 +46,7 @@ end)
 
 -- LSP MAPS
 -- Rename references
-<<<<<<< Updated upstream
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<leader>er", "<cmd>lua vim.diagnostic.open_float()<CR>")
-=======
 map('n', '<leader>rn', vim.lsp.buf.rename)
 map('n', '<leader>er', vim.diagnostic.open_float)
->>>>>>> Stashed changes
