@@ -9,7 +9,15 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "basedpyright", "lua_ls", "marksman", "svelte", "rust_analyzer" },
+				ensure_installed = {
+					"basedpyright",
+					"lua_ls",
+					"marksman",
+					"svelte",
+					"rust_analyzer",
+					"biome",
+					"bashls",
+				},
 			})
 		end,
 		event = "VeryLazy", -- Loads after critical plugins
@@ -38,6 +46,15 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.svelte.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.biome.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.bashls.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
