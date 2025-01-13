@@ -17,6 +17,9 @@ return {
 					"rust_analyzer",
 					"biome",
 					"bashls",
+					"html",
+					"phpactor",
+					"emmet_ls",
 				},
 			})
 		end,
@@ -51,10 +54,18 @@ return {
 			lspconfig.biome.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tailwindcss.setup({
+			lspconfig.bashls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.bashls.setup({
+			lspconfig.html.setup({
+				filetypes = { "html" },
+				capabilities = capabilities,
+			})
+			lspconfig.emmet_ls.setup({
+				filetypes = { "php" },
+				capabilities = capabilities,
+			})
+			lspconfig.phpactor.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
