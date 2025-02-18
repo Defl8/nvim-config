@@ -36,5 +36,5 @@ end
 -- CHANGE THIS ONLY
 return {
     --rose_pine("moon"),
-    catppuccin("frappe"),
+    catppuccin("mocha"),
 }

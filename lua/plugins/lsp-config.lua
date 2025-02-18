@@ -22,6 +22,7 @@ return {
                     "emmet_ls",
                     "ts_ls",
                     "cssls",
+                    "hyprls",
                 },
             })
         end,
@@ -74,6 +75,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.cssls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.hyprls.setup({
                 capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
