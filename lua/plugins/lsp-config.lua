@@ -23,6 +23,7 @@ return {
                     "ts_ls",
                     "cssls",
                     "hyprls",
+                    "clangd",
                 },
             })
         end,
@@ -78,6 +79,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.hyprls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.clangd.setup({
                 capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
