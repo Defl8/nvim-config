@@ -29,7 +29,7 @@ map("n", "<leader>c", "_<C-q>")
 
 -- Remove highlight
 map("n", "<leader>rh", function()
-	cmd("noh")
+    cmd("noh")
 end)
 
 -- :W remap to :w
@@ -41,8 +41,11 @@ create_command("Q", "q", {})
 
 -- Shoutout
 map("n", "<leader><leader>", function()
-	cmd("so")
+    cmd("so")
 end)
+
+-- Select last highlight or paste area
+map("n", "gV", "`[v`]")
 
 -- LSP MAPS
 -- Rename references
