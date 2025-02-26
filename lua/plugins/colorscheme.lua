@@ -34,7 +34,9 @@ local function rose_pine(variant)
 end
 
 -- CHANGE THIS ONLY
+local colors = { catppuccin("mocha"), rose_pine("moon") }
+math.randomseed(os.time())
+local rand_index = math.random(#colors)
 return {
-    --rose_pine("moon"),
-    catppuccin("mocha"),
+    colors[rand_index]
 }
