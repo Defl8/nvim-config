@@ -37,6 +37,7 @@ end
 local colors = { catppuccin("mocha"), rose_pine("moon") }
 math.randomseed(os.time())
 local rand_index = math.random(#colors)
+
 return {
     colors[rand_index]
 }
