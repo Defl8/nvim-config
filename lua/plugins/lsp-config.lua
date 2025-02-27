@@ -83,6 +83,7 @@ return {
             })
             lspconfig.clangd.setup({
                 capabilities = capabilities,
+                cmd = { "clangd", "--fallback-style=Google" }
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
