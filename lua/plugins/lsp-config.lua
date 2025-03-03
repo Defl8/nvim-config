@@ -18,12 +18,12 @@ return {
                     "biome",
                     "bashls",
                     "html",
-                    "phpactor",
                     "emmet_ls",
                     "ts_ls",
                     "cssls",
                     "hyprls",
                     "clangd",
+                    "intelephense",
                 },
             })
         end,
@@ -69,9 +69,6 @@ return {
                 filetypes = { "html" },
                 capabilities = capabilities,
             })
-            lspconfig.phpactor.setup({
-                capabilities = capabilities,
-            })
             lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
@@ -84,6 +81,9 @@ return {
             lspconfig.clangd.setup({
                 capabilities = capabilities,
                 cmd = { "clangd", "--fallback-style=Google" }
+            })
+            lspconfig.intelephense.setup({
+                capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
