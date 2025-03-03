@@ -66,7 +66,7 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.emmet_ls.setup({
-                filetypes = { "php", "html" },
+                filetypes = { "html" },
                 capabilities = capabilities,
             })
             lspconfig.phpactor.setup({
