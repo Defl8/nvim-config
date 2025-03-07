@@ -36,8 +36,7 @@ return {
         "neovim/nvim-lspconfig",
         event = { "BufReadPre", "BufNewFile" }, -- Load when new buffer is created or opened
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
             local lspconfig = require("lspconfig")
 
             lspconfig.lua_ls.setup({
