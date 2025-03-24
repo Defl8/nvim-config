@@ -24,6 +24,7 @@ return {
                     "hyprls",
                     "clangd",
                     "intelephense",
+                    "go"
                 },
             })
         end,
@@ -85,6 +86,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.csharp_ls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.go.setup({
                 capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
