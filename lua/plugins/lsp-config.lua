@@ -24,7 +24,7 @@ return {
                     "hyprls",
                     "clangd",
                     "intelephense",
-                    "go"
+                    "gopls"
                 },
             })
         end,
