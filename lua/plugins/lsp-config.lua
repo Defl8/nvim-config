@@ -88,7 +88,7 @@ return {
             lspconfig.csharp_ls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.go.setup({
+            lspconfig.gopls.setup({
                 capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
