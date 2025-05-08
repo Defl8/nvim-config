@@ -23,7 +23,6 @@ return {
                     "cssls",
                     "hyprls",
                     "clangd",
-                    "intelephense",
                     "gopls"
                 },
             })
