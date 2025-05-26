@@ -23,7 +23,8 @@ return {
                     "cssls",
                     "hyprls",
                     "clangd",
-                    "gopls"
+                    "gopls",
+                    "htmx",
                 },
             })
         end,
@@ -88,6 +89,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.htmx.setup({
                 capabilities = capabilities,
             })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
