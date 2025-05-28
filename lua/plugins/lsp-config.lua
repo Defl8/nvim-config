@@ -13,7 +13,6 @@ return {
                     "basedpyright",
                     "lua_ls",
                     "marksman",
-                    "svelte",
                     "rust_analyzer",
                     "biome",
                     "bashls",
@@ -35,7 +34,7 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" }, -- Load when new buffer is created or opened
+        event = { "BufRead" }, -- Load when new buffer is created or opened
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
             local lspconfig = require("lspconfig")
@@ -86,9 +85,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.csharp_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.gopls.setup({
                 capabilities = capabilities,
             })
             lspconfig.htmx.setup({
