@@ -48,9 +48,6 @@ return {
             lspconfig.marksman.setup({
                 capabilities = capabilities,
             })
-            lspconfig.basedpyright.setup({
-                capabilities = capabilities,
-            })
             lspconfig.svelte.setup({
                 capabilities = capabilities,
             })
