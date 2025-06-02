@@ -51,4 +51,3 @@ map("n", "gV", "`[v`]")
 -- Rename references
 map('n', '<leader>rn', vim.lsp.buf.rename)
 map('n', '<leader>er', vim.diagnostic.open_float)
-map('n', '<leader>td', vim.diagnostic.)
