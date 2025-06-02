@@ -49,8 +49,6 @@ map("n", "gV", "`[v`]")
 
 -- LSP MAPS
 -- Rename references
-map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-map("n", "<leader>er", "<cmd>lua vim.diagnostic.open_float()<CR>")
 map('n', '<leader>rn', vim.lsp.buf.rename)
 map('n', '<leader>er', vim.diagnostic.open_float)
-
+map('n', '<leader>td', vim.diagnostic.)
