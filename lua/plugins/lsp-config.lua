@@ -1,3 +1,20 @@
+-- Add new servers here and they will be auto initialized
+local servers = {
+    "basedpyright",
+    "lua_ls",
+    "marksman",
+    "rust_analyzer",
+    "biome",
+    "bashls",
+    "html",
+    "emmet_ls",
+    "ts_ls",
+    "cssls",
+    "hyprls",
+    "clangd",
+    "gopls",
+    "htmx",
+}
 return {
     {
         "williamboman/mason.nvim",
@@ -9,22 +26,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "basedpyright",
-                    "lua_ls",
-                    "marksman",
-                    "rust_analyzer",
-                    "biome",
-                    "bashls",
-                    "html",
-                    "emmet_ls",
-                    "ts_ls",
-                    "cssls",
-                    "hyprls",
-                    "clangd",
-                    "gopls",
-                    "htmx",
-                },
+                ensure_installed = servers,
             })
         end,
         event = "VeryLazy", -- Loads after critical plugins
@@ -39,54 +41,14 @@ return {
             local capabilities = require('blink.cmp').get_lsp_capabilities()
             local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.marksman.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.svelte.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.biome.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.bashls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.html.setup({
-                filetypes = { "html" },
-                capabilities = capabilities,
-            })
-            lspconfig.emmet_ls.setup({
-                filetypes = { "html" },
-                capabilities = capabilities,
-            })
-            lspconfig.ts_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.cssls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.hyprls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-                cmd = { "clangd", "--fallback-style=Google" }
-            })
-            lspconfig.intelephense.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.csharp_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.htmx.setup({
-                capabilities = capabilities,
-            })
+            -- Walk over servers and initialize
+            for _, lsp in ipairs(servers) do
+                lspconfig[lsp].setup({
+                    capabilities = capabilities
+                })
+            end
+
+            -- Lsp Maps
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
             vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
