@@ -27,6 +27,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = servers,
+                automatic_enable = false
             })
         end,
         event = "VeryLazy", -- Loads after critical plugins
