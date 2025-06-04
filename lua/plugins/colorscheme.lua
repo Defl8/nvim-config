@@ -54,5 +54,5 @@ math.randomseed(os.time())
 local rand_index = math.random(#colors)
 
 return {
-    colors[rand_index]
+    rose_pine("moon")
 }
