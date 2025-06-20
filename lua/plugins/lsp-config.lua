@@ -26,9 +26,10 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = servers,
-                automatic_enable = false
+                automatic_enable = false,
+                ensure_installed = servers
             })
+            --require("mason-lspconfig").setup_handlers({})
         end,
         event = "VeryLazy", -- Loads after critical plugins
         opts = {
