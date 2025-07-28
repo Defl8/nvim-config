@@ -8,3 +8,4 @@ vim.o.softtabstop = 4 -- # chars to tab when using TAB key instead of inserting 
 vim.o.shiftwidth = 4 -- Chars to shift when using ">>"
 vim.o.si = true -- Smart indentation on newlines in code blocks
 vim.o.colorcolumn = "80" -- Column for personal max line length
+vim.o.signcolumn = "yes" -- Prevent left col shifting
