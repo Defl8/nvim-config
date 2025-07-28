@@ -1,6 +1,12 @@
 require "mason".setup()
+require "blink.cmp".setup({
+	fuzzy = {
+		implementation = "lua"
+	}
+})
 
-vim.lsp.enable({ "lua_ls", "basedpyright" })
+local servers = { "lua_ls", "basedpyright" }
+vim.lsp.enable(servers)
 
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format the current buffer" })
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Check inline error" })
