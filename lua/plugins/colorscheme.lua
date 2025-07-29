@@ -1,4 +1,9 @@
-local colorschemes = { "vaporwave", "catppuccin-frappe", "catppuccin-mocha" }
-local color = colorschemes[math.random(1, #colorschemes)]
+require "rose-pine".setup({
+	variant = "moon",
+	styles = {
+		bold = false,
+		italic = false,
+	}
+})
 
-vim.cmd(":colorscheme " .. color)
+vim.cmd("colorscheme rose-pine")

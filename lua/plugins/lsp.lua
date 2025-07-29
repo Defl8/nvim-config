@@ -5,7 +5,7 @@ require "blink.cmp".setup({
 	}
 })
 
-local servers = { "lua_ls", "basedpyright" }
+local servers = { "lua_ls", "basedpyright", "gopls" }
 vim.lsp.enable(servers)
 
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format the current buffer" })
