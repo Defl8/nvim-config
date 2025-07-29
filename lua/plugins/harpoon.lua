@@ -8,8 +8,9 @@ local config = require "telescope.config".values
 
 local function toggle_telescope(harpoon_files)
 	local file_paths = {}
-	for _, item in ipairs(harpoon_files.items) do
-		table.insert(file_paths, item.value)
+	for i, item in ipairs(harpoon_files.items) do
+		local val = i .. ". " .. item.value -- Add number in front of the file
+		table.insert(file_paths, val)
 	end
 
 	require "telescope.pickers".new({}, {
