@@ -1,9 +1,4 @@
 require "mason".setup()
-require "blink.cmp".setup({
-	fuzzy = {
-		implementation = "lua"
-	}
-})
 
 local servers = { "lua_ls", "basedpyright", "gopls" }
 vim.lsp.enable(servers)

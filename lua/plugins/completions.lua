@@ -1,4 +1,7 @@
 require "blink.cmp".setup({
-	opts = { fuzzy = { implementation = "rust" },
+	fuzzy = { implementation = "lua" },
+	snippets = { preset = "default" },
+	sources = {
+		default = { "lsp", "path", "snippets", "buffer" },
 	},
 })

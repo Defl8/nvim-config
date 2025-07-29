@@ -9,4 +9,6 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-lua/plenary.nvim",           name = "plenary" },
 	{ src = "https://github.com/ThePrimeagen/harpoon",            version = "harpoon2", name = "harpoon" },
 	{ src = "https://github.com/nvim-telescope/telescope.nvim",   name = "telescope" },
+	{ src = "https://github.com/nvim-tree/nvim-web-devicons",   name = "icons" },
+	{ src = "https://github.com/rafamadriz/friendly-snippets",   name = "snippets" },
 })
