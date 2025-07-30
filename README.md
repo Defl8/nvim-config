@@ -10,4 +10,6 @@ Repository for storing my personal Neovim configuration.
 - [Harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Oil](https://github.com/stevearc/oil.nvim)
-- []()
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [Mason](https://github.com/mason-org/mason.nvim)
+- Dependencies for plugins also installed but not listed.
