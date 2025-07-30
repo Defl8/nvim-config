@@ -1,11 +1,13 @@
 # nvim-config
-Repository for storing personal Neovim configuration.
+Repository for storing my personal Neovim configuration.
 
-## Rework
-The whole config has been redone from scratch and now uses [Lazy](https://github.com/folke/lazy.nvim) as the package manager.
+## Minimalist Rework
+- Unsatified with the structure of my Lazy config, I decided to move to a more native approach.
+- Still uses a few plugins that I consider a core part of my workflow, listed below.
+- Heavily inspired by [Sylvan Franklin](https://www.youtube.com/@sylvanfranklin)
 
 ## Plugins
-The plugins being currently used can be found in my [NeoVim Config](https://github.com/stars/Defl8/lists/neovim-config) list.
-
-## Config language
-All the config structure is done in [Lua](https://github.com/lua/lua).
+- [Harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Oil](https://github.com/stevearc/oil.nvim)
+- []()

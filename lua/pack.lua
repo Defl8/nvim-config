@@ -1,7 +1,6 @@
 local github_prefix = "https://github.com/"
 vim.pack.add({
 	{ src = github_prefix .. "stevearc/oil.nvim",               name = "oil" },
-	{ src = github_prefix .. "olimorris/onedarkpro.nvim",       name = "onedarkpro" },
 	{ src = github_prefix .. "neovim/nvim-lspconfig",           name = "lsp" },
 	{ src = github_prefix .. "mason-org/mason.nvim",            name = "mason" },
 	{ src = github_prefix .. "rose-pine/neovim",                name = "rose-pine" },
@@ -10,5 +9,4 @@ vim.pack.add({
 	{ src = github_prefix .. "ThePrimeagen/harpoon",            version = "harpoon2", name = "harpoon" },
 	{ src = github_prefix .. "nvim-telescope/telescope.nvim",   name = "telescope" },
 	{ src = github_prefix .. "nvim-tree/nvim-web-devicons",   name = "icons" },
-	{ src = github_prefix .. "rafamadriz/friendly-snippets",   name = "snippets" },
 })
