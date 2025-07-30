@@ -9,3 +9,4 @@ vim.o.shiftwidth = 4 -- Chars to shift when using ">>"
 vim.o.si = true -- Smart indentation on newlines in code blocks
 vim.o.colorcolumn = "80" -- Column for personal max line length
 vim.o.signcolumn = "yes" -- Prevent left col shifting
+vim.o.winborder  = "rounded" -- Border around floating windows
