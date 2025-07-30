@@ -8,5 +8,5 @@ vim.pack.add({
 	{ src = github_prefix .. "nvim-lua/plenary.nvim",           name = "plenary" },
 	{ src = github_prefix .. "ThePrimeagen/harpoon",            version = "harpoon2", name = "harpoon" },
 	{ src = github_prefix .. "nvim-telescope/telescope.nvim",   name = "telescope" },
-	{ src = github_prefix .. "nvim-tree/nvim-web-devicons",   name = "icons" },
+	{ src = github_prefix .. "nvim-tree/nvim-web-devicons",     name = "icons" },
 })
