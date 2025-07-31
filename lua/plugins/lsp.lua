@@ -1,6 +1,6 @@
 require "mason".setup()
 
-local servers = { "lua_ls", "basedpyright", "gopls" }
+local servers = { "lua_ls", "gopls", "bashls", "pyright", "black" }
 vim.lsp.enable(servers)
 
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format the current buffer" })
