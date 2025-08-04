@@ -15,7 +15,7 @@ vim.cmd("set completeopt+=noselect")
 
 -- Servers
 local lspconfig = require "lspconfig"
-local servers = { "lua_ls", "gopls", "bashls", "pyright", "templ", "html", "htmx", "emmet_ls", "marksman" }
+local servers = { "lua_ls", "gopls", "bashls", "pyright", "templ", "html", "htmx", "emmet_ls", "marksman", "cssls" }
 -- Server configs
 -- HTML
 lspconfig.html.setup({
@@ -29,8 +29,6 @@ lspconfig.htmx.setup({
 lspconfig.marksman.setup({
 	filetypes = { "markdown" }
 })
-
-
 
 vim.lsp.enable(servers)
 
