@@ -23,6 +23,7 @@ return {
 				no_bold = true,
 				no_underline = true,
 			})
-		end
+			vim.cmd.colorscheme "catppuccin"
+		end,
 	}
 }
