@@ -8,17 +8,6 @@ return {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 		},
-		config = function()
-<<<<<<< HEAD
-			require("mason-lspconfig").setup {
-				automatic_enable = false,
-			}
-=======
-			require("mason-lspconfig").setup({
-				automatic_enable = false,
-			})
->>>>>>> 862bcb0 (feat: disable auto enable for mason)
-		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
