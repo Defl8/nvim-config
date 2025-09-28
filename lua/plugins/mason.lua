@@ -25,9 +25,10 @@ return {
 			for _, server in ipairs(servers) do
 				local capabilities = require "blink.cmp".get_lsp_capabilities()
 				local lsp_name = map_names[server.name]
-				lspconfig[lsp_name].setup({
-					capabilties = capabilities
-				})
+				--lspconfig[lsp_name].setup({
+				--	capabilties = capabilities
+				--})
+				vim.lsp.enable(lsp_name)
 			end
 
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
