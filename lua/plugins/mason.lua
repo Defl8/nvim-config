@@ -19,17 +19,19 @@ return {
 		event = { "BufReadPre" },
 		config = function()
 			local servers = require "mason-registry".get_installed_packages()
+			-- Get the lsp server names and map them to the Mason name
 			local map_names = require "mason-lspconfig".get_mappings().package_to_lspconfig
-			local lspconfig = require "lspconfig"
 
+			-- Enable each server
 			for _, server in ipairs(servers) do
-				local capabilities = require "blink.cmp".get_lsp_capabilities()
 				local lsp_name = map_names[server.name]
-				--lspconfig[lsp_name].setup({
-				--	capabilties = capabilities
-				--})
 				vim.lsp.enable(lsp_name)
 			end
+
+			local capabilities = require "blink.cmp".get_lsp_capabilities()
+			vim.lsp.config("*", {
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
