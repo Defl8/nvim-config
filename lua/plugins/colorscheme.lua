@@ -10,20 +10,20 @@ return {
 					italic = false,
 				}
 			})
+			vim.cmd.colorscheme "rose-pine"
 		end,
 	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		config = function()
-			require "catppuccin".setup({
-				flavour = "mocha", -- latte, frappe, macchiato, mocha
-				show_end_of_buffer = true,
-				no_italic = true,
-				no_bold = true,
-				no_underline = true,
-			})
-			vim.cmd.colorscheme "catppuccin"
-		end,
-	}
+	--{
+	--	"catppuccin/nvim",
+	--	name = "catppuccin",
+	--	config = function()
+	--		require "catppuccin".setup({
+	--			flavour = "mocha", -- latte, frappe, macchiato, mocha
+	--			show_end_of_buffer = true,
+	--			no_italic = true,
+	--			no_bold = true,
+	--			no_underline = true,
+	--		})
+	--	end,
+	--}
 }
