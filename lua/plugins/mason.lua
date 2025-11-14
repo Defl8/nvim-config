@@ -9,9 +9,9 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 		config = function()
-			require("mason-lspconfig").setup {
+			require("mason-lspconfig").setup({
 				automatic_enable = true,
-			}
+			})
 		end,
 	},
 	{
@@ -28,14 +28,16 @@ return {
 			-- 	vim.lsp.enable(lsp_name)
 			-- end
 
-			local capabilities = require "blink.cmp".get_lsp_capabilities()
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			vim.lsp.config("*", {
 				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
-			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+			vim.keymap.set("n", "<leader>lf", function()
+				require("conform").format()
+			end)
 			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 		end,
-	}
+	},
 }
