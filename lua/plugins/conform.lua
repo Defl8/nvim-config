@@ -9,6 +9,7 @@ return {
 					python = { "black" },
 					rust = { "rustfmt" },
 					lua = { "stylua", lsp_format = "fallback" },
+					go = { "gofmt", lsp_format = "fallback" },
 				},
 			})
 		end,
