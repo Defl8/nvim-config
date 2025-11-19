@@ -32,12 +32,6 @@ return {
 			vim.lsp.config("*", {
 				capabilities = capabilities,
 			})
-
-			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
-			vim.keymap.set("n", "<leader>lf", function()
-				require("conform").format()
-			end)
-			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 		end,
 	},
 }
