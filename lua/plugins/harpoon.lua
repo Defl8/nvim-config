@@ -1,23 +1,58 @@
 return {
-    'ThePrimeagen/harpoon',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-
-    config = function()
-        local mark = require("harpoon.mark")
-        local ui = require("harpoon.ui")
-        require("harpoon").setup()
-        vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu, { desc = "Toggles harpoon quick menu" })
-        --vim.keymap.set("n", "<leader>h", ":Telescope harpoon marks <CR>", { desc = "Toggles harpoon quick menu" })
-        vim.keymap.set("n", "<leader>a", mark.add_file, { desc = "Adds file to harpoon" })
-
-
-        vim.keymap.set("n", "<leader>m1", function() ui.nav_file(1) end, { desc = "Goes to specific file in harpoon" })
-        vim.keymap.set("n", "<leader>m2", function() ui.nav_file(2) end, { desc = "Goes to specific file in harpoon" })
-        vim.keymap.set("n", "<leader>m3", function() ui.nav_file(3) end, { desc = "Goes to specific file in harpoon" })
-        vim.keymap.set("n", "<leader>m4", function() ui.nav_file(4) end, { desc = "Goes to specific file in harpoon" })
-
-
-        vim.keymap.set("n", "<leader>mf", ui.nav_next, { desc = "Goes to next file in harpoon" })
-        vim.keymap.set("n", "<leader>mb", ui.nav_prev, { desc = "Goes to previous file in harpoon" })
-    end,
+	"ThePrimeagen/harpoon",
+	branch = "harpoon2",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	keys = {
+		{
+			"<leader>a",
+			function()
+				require("harpoon"):list():add()
+			end,
+			desc = "Add file to harpoon",
+		},
+		{
+			"<leader>h",
+			function()
+				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+			end,
+			desc = "Toggle harpoon menu",
+		},
+		{
+			"<C-h>",
+			function()
+				require("harpoon"):list():select(1)
+			end,
+			desc = "Harpoon file 1",
+		},
+		{
+			"<C-j>",
+			function()
+				require("harpoon"):list():select(2)
+			end,
+			desc = "Harpoon file 2",
+		},
+		{
+			"<C-k>",
+			function()
+				require("harpoon"):list():select(3)
+			end,
+			desc = "Harpoon file 3",
+		},
+		{
+			"<C-l>",
+			function()
+				require("harpoon"):list():select(4)
+			end,
+			desc = "Harpoon file 4",
+		},
+	},
+	config = function()
+		local harpoon = require("harpoon")
+		harpoon:setup({
+			settings = {
+				save_on_toggle = true,
+				sync_on_ui = true,
+			},
+		})
+	end,
 }
