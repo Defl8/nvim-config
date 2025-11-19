@@ -3,12 +3,14 @@ return {
 		"stevearc/conform.nvim",
 		dependencies = { "mason.nvim" },
 		keys = {
-			"<leader>fl",
-			function()
-				require("conform").format()
-			end,
-			mode = "n",
-			desc = "Format file",
+			{
+				"<leader>lf",
+				function()
+					require("conform").format()
+				end,
+				mode = "n",
+				desc = "Format file",
+			},
 		},
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {},

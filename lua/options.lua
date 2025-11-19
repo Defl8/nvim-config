@@ -11,3 +11,7 @@ vim.o.colorcolumn = "80" -- Column for personal max line length
 vim.o.signcolumn = "yes" -- Prevent left col shifting
 vim.o.winborder = "rounded" -- Border around floating window
 vim.o.clipboard = "unnamedplus"
+
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

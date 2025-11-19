@@ -1,6 +1,7 @@
 return {
 	{
 		"mason-org/mason-lspconfig.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			ensure_installed = { "lua_ls", "basedpyright", "gopls" },
 		},
@@ -8,15 +9,10 @@ return {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 		},
-		config = function()
-			require("mason-lspconfig").setup({
-				automatic_enable = true,
-			})
-		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		event = { "BufReadPre" },
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			--local servers = require "mason-registry".get_installed_packages()
 			-- Get the lsp server names and map them to the Mason name
