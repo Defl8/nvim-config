@@ -3,7 +3,7 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
-			ensure_installed = { "lua_ls", "basedpyright", "gopls", "templ", "black" },
+			ensure_installed = { "lua_ls", "basedpyright", "gopls", "templ" },
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
