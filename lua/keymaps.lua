@@ -17,7 +17,8 @@ keymap("n", "<leader>u", function() -- Update plugins
 	cmd("Lazy sync")
 end)
 
-keymap("n", "<leader>rn", vim.lsp.buf.rename)
+-- LSP Binds
+-- keymap("n", "<leader>rn", vim.lsp.buf.rename)
 keymap("n", "<leader>d", vim.diagnostic.open_float)
 
 -- Remove highlight from file
