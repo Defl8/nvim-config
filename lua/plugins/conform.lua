@@ -22,6 +22,7 @@ return {
 					lua = { "stylua", lsp_format = "fallback" },
 					go = { "gofmt", lsp_format = "fallback" },
 					csharp = { "csharpier" },
+					c = { "clang-format" },
 				},
 			})
 		end,
