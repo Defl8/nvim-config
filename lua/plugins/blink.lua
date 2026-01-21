@@ -11,4 +11,17 @@ return {
 		},
 		signature = { enabled = true },
 	},
+	config = function()
+		require("blink.cmp").setup({
+			sources = {
+				default = { "lsp", "path", "snippets", "buffer" },
+				per_filetype = {
+					sql = { "dadbod" },
+				},
+				providers = {
+					dadbod = { module = "vim_dadbod_completion.blink" },
+				},
+			},
+		})
+	end,
 }
