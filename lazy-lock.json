@@ -1,4 +1,5 @@
 {
+  "base16-nvim": { "branch": "master", "commit": "012273e4bbf3e143224a272ad2efd10b69a000ba" },
   "blink.cmp": { "branch": "main", "commit": "485c03400608cb6534bbf84da8c1c471fc4808c0" },
   "conform.nvim": { "branch": "master", "commit": "619363c30309d29ffa631e67c8183f2a72caa373" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
