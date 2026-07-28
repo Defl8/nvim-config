@@ -13,9 +13,9 @@ keymap({ "n", "v" }, "<leader>d", '"+d<CR>') -- Delete to sys clipboard
 keymap({ "n", "v" }, "<leader>p", '"+p') -- Paste from sys clipboard
 keymap({ "n", "v" }, "<leader>P", '"+P') -- Paste from sys clipboard
 keymap("n", "gV", "`[v`]") -- Last highlighted item
-keymap("n", "<leader>u", function() -- Update plugins
-	cmd("Lazy sync")
-end)
+-- keymap("n", "<leader>u", function() -- Update plugins
+-- 	cmd("Lazy sync")
+-- end)
 
 -- LSP Binds
 -- keymap("n", "<leader>rn", vim.lsp.buf.rename)

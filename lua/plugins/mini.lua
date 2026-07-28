@@ -18,5 +18,10 @@ require("mini.pairs").setup()
 local file_source = "Pick files"
 require("mini.pick").setup({
     keymap("n", "<leader>ff", "<CMD>" .. file_source .. "<CR>"),
-    keymap("n", "<leader>fg", "<CMD>" .. file_source .. " tool='git'" .. "<CR>")
+    keymap("n", "<leader>fg", "<CMD>" .. file_source .. " tool='git'" .. "<CR>"),
+    keymap("n", "<leader>rg", "<CMD>Pick grep_live<CR>"),
+    keymap("n", "<leader>tt", "<CMD>lua print('test')<CR>"),
 })
+
+-- STATUS LINE
+require("mini.statusline").setup()

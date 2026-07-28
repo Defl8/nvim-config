@@ -2,6 +2,7 @@
 vim.o.relativenumber = true -- Relative line numbers
 vim.o.number = true -- Line numbers
 vim.o.wrap = false -- No line wrapping
+vim.o.hlsearch = false -- No highlight when searching
 
 vim.o.swapfile = false -- No swap file for nvim instance
 

@@ -1,4 +1,6 @@
 require("options")
 require("keymaps")
+require("colorscheme")
 require("plugins.oil")
 require("plugins.mini")
+require("plugins.harpoon")
