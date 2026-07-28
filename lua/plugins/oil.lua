@@ -1,20 +1,12 @@
-return {
-	"stevearc/oil.nvim",
-	lazy = false,
-	opts = {},
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	keys = {
-		{ "<leader>e", "<CMD>Oil<CR>", desc = "Open Oil at current location" },
-	},
-	config = function()
-		require("oil").setup({
-			keymaps = {
-				["<CR>"] = "actions.select",
-			},
-			use_default_keymaps = false,
-			view_options = {
-				show_hidden = true,
-			},
-		})
-	end,
-}
+vim.pack.add({
+    'https://github.com/stevearc/oil.nvim',
+})
+
+
+require("oil").setup({
+    default_file_explorer = true,
+    view_options = { show_hidden = true },
+    keymaps = {
+        ["<leader>e"] = { "actions.parent", mode = "n" },
+    }
+})
