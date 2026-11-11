@@ -1,7 +1,7 @@
 -- Options
 vim.o.relativenumber = true -- Relative line numbers
 vim.o.number = true -- Line numbers
-vim.o.wrap = false -- No line wrapping
+vim.o.wrap = true -- No line wrapping
 vim.o.hlsearch = false -- No highlight when searching
 
 vim.o.swapfile = false -- No swap file for nvim instance
@@ -12,6 +12,7 @@ vim.o.shiftwidth = 4 -- Chars to shift when using ">>"
 vim.o.expandtab = true; -- Indent with spaces instead of tab characters
 vim.o.si = true -- Smart indentation on newlines in code blocks
 
+vim.o.textwidth = 80 -- Make max line length 80
 vim.o.colorcolumn = "80" -- Column for personal max line length
 vim.o.signcolumn = "yes" -- Prevent left col shifting
 

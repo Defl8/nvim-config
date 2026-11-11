@@ -3,11 +3,10 @@ vim.pack.add({
 })
 
 local keymap = vim.keymap.set
-local cmd = vim.cmd
-
 
 -- ICONS
 require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
 
 
 -- PAIRS
