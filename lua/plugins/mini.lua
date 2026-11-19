@@ -13,13 +13,26 @@ MiniIcons.mock_nvim_web_devicons()
 require("mini.pairs").setup()
 
 
--- PICK
-local file_source = "Pick files"
-require("mini.pick").setup({
-    keymap("n", "<leader>ff", "<CMD>" .. file_source .. "<CR>"),
-    keymap("n", "<leader>fg", "<CMD>" .. file_source .. " tool='git'" .. "<CR>"),
-    keymap("n", "<leader>rg", "<CMD>Pick grep_live<CR>"),
-    keymap("n", "<leader>tt", "<CMD>lua print('test')<CR>"),
+
+local mini_pick = require("mini.pick")
+
+
+
+mini_pick.setup({
+    -- All files
+    keymap("n", "<leader>ff", function ()
+        mini_pick.builtin.files({ tool = "fallback" })
+    end),
+
+    -- Git files
+    keymap("n", "<leader>fg", function ()
+        mini_pick.builtin.files({ tool = "git" })
+    end),
+
+    -- Grep for references
+    keymap("n", "<leader>rg", function ()
+        mini_pick.builtin.grep_live()
+    end),
 })
 
 -- STATUS LINE

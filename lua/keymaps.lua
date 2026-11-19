@@ -34,3 +34,8 @@ end, { desc = "Write file if there are changes then source" })
 cmd([[command! W w]]) -- Remap capital W to lowercase w
 cmd([[command! Q q]]) -- Remap capital Q to lowercase q
 cmd([[command! Wq wq]]) -- Remap capital Wq to lowercase wq
+
+-- Quick Fix List Binds
+keymap("n", "gq", "<cmd>cclose<cr>", { desc = "Close quickfix window" })
+keymap("n", "<C-n>", "<cmd>cnext<cr>", { desc = "Next entry in quickfix list" })
+keymap("n", "<C-p>", "<cmd>cprev<cr>", { desc = "Previous entry in quickfix list" })
